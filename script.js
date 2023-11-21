@@ -35,18 +35,27 @@ const tab2ContentEl = document.getElementById("content-2");
 const tab3ContentEl = document.getElementById("content-3");
 
 tab1El.onclick = () => {
+    tab1El.classList.add("active");
+    tab2El.classList.remove("active");
+    tab3El.classList.remove("active");
     tab1ContentEl.classList.remove("hide");
     tab2ContentEl.classList.add("hide");
     tab3ContentEl.classList.add("hide");
 };
 
 tab2El.onclick = () => {
+    tab1El.classList.remove("active");
+    tab2El.classList.add("active");
+    tab3El.classList.remove("active");
     tab2ContentEl.classList.remove("hide");
     tab1ContentEl.classList.add("hide");
     tab3ContentEl.classList.add("hide");
 };
 
 tab3El.onclick = () => {
+    tab1El.classList.remove("active");
+    tab2El.classList.remove("active");
+    tab3El.classList.add("active");
     tab3ContentEl.classList.remove("hide");
     tab1ContentEl.classList.add("hide");
     tab2ContentEl.classList.add("hide");
